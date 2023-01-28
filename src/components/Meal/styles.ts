@@ -22,11 +22,11 @@ export const Time = styled.Text`
 		`;
 
 export const Divider = styled.View`
+	margin-left: 12px;
+	margin-right: 12px;
 	width: 1px;
 	height: 100%;
-	color: ${({ theme }) => theme.COLORS.GRAY_400};
-	margin-right: 12px;
-	margin-left: 12px;
+	background-color: ${({ theme }) => theme.COLORS.GRAY_400};
 `;
 
 export const Name = styled.Text`
