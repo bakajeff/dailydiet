@@ -11,7 +11,7 @@ export function Meal({ hour, name, isOnDiet }: Props) {
 		<Container>
 			<Time>{hour}</Time>
 			<Divider />
-			<Name>{name}</Name>
+			<Name numberOfLines={1}>{name}</Name>
 			<Status isOnDiet={isOnDiet} />
 		</Container>
 	);
