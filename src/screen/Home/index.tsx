@@ -20,28 +20,24 @@ export function Home() {
 			date: "12.08.22",
 			data: [
 				{
-					date: "12.08.22",
 					hour: "20:00",
 					name: "X-tudo",
 					description: "Xis completo da lanchonete do bairro",
 					isOnDiet: false,
 				},
 				{
-					date: "12.08.22",
 					hour: "16:00",
 					name: "Whey protein com leite",
 					description: "Xis completo da lanchonete do bairro",
 					isOnDiet: true,
 				},
 				{
-					date: "12.08.22",
 					hour: "12:30",
 					name: "Salada cesar com frango grelhado",
 					description: "Xis completo da lanchonete do bairro",
 					isOnDiet: true,
 				},
 				{
-					date: "12.08.22",
 					hour: "09:30",
 					name: "Vitamina com banana com abacate",
 					description: "Xis completo da lanchonete do bairro",
@@ -54,7 +50,7 @@ export function Home() {
 	return (
 		<Container>
 			<Header />
-			<MealCard />
+			<MealCard percent={90.86} color="PRIMARY" />
 			<NewMeal />
 			<SectionList
 				sections={meals}

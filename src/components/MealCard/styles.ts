@@ -2,10 +2,18 @@ import { TouchableOpacity } from "react-native";
 import styled, { css } from "styled-components/native";
 
 import { ArrowUpRight } from "phosphor-react-native";
-import theme from "../../theme";
 
-export const Container = styled(TouchableOpacity)`
-	background-color: ${({ theme }) => theme.COLORS.GREEN_LIGHT};
+export type DietBasedColor = "PRIMARY" | "SECONDARY";
+
+type Props = {
+	color: DietBasedColor;
+};
+
+export const Container = styled(TouchableOpacity)<Props>`
+	${({ theme, color }) =>
+		color === "PRIMARY"
+			? css`background-color: ${theme.COLORS.GREEN_LIGHT}`
+			: css`background-color: ${theme.COLORS.RED_LIGHT}`}
 
 	padding: 20px 16px;
 
@@ -33,9 +41,9 @@ export const Caption = styled.Text`
 	`}
 `;
 
-export const Icon = styled(ArrowUpRight).attrs(({ theme }) => ({
+export const Icon = styled(ArrowUpRight).attrs<Props>(({ theme, color }) => ({
 	size: 24,
-	color: theme.COLORS.GREEN_DARK,
+	color: color === "PRIMARY" ? theme.COLORS.GREEN_DARK : theme.COLORS.RED_DARK,
 }))`
 	position: absolute;
 	top: 8px;
