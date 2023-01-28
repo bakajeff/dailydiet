@@ -33,7 +33,7 @@ export const ButtonText = styled.Text`
 	${({ theme }) => css`
 		color: ${theme.COLORS.WHITE};
 		font-size: ${theme.FONT_SIZE.SM}px;
-		font-family: ${theme.FONT_FAMILY.REGULAR};
+		font-family: ${theme.FONT_FAMILY.BOLD};
 	`}
 `;
 
