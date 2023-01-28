@@ -1,12 +1,18 @@
 import { Container, Name, Divider, Status, Time } from "./styles";
 
-export function Meal() {
+type Props = {
+	hour: string;
+	name: string;
+	isOnDiet: boolean;
+};
+
+export function Meal({ hour, name, isOnDiet }: Props) {
 	return (
 		<Container>
-			<Time>20:00</Time>
+			<Time>{hour}</Time>
 			<Divider />
-			<Name>X-tudo</Name>
-			<Status isOnDiet={false} />
+			<Name>{name}</Name>
+			<Status isOnDiet={isOnDiet} />
 		</Container>
 	);
 }

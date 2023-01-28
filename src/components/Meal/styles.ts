@@ -11,6 +11,7 @@ export const Container = styled(TouchableOpacity)`
 	border: 1px solid ${({ theme }) => theme.COLORS.GRAY_500};
 	padding: 14px 16px 14px 12px;
 	align-items: center;
+	margin-bottom: 8px;
 `;
 
 export const Time = styled.Text`
