@@ -1,6 +1,9 @@
 import { TouchableOpacity } from "react-native";
 import styled, { css } from "styled-components/native";
 
+import { ArrowUpRight } from "phosphor-react-native";
+import theme from "../../theme";
+
 export const Container = styled(TouchableOpacity)`
 	background-color: ${({ theme }) => theme.COLORS.GREEN_LIGHT};
 
@@ -28,4 +31,13 @@ export const Caption = styled.Text`
 		font-family: ${theme.FONT_FAMILY.REGULAR};
 		color: ${theme.COLORS.GRAY_200};
 	`}
+`;
+
+export const Icon = styled(ArrowUpRight).attrs(({ theme }) => ({
+	size: 24,
+	color: theme.COLORS.GREEN_DARK,
+}))`
+	position: absolute;
+	top: 8px;
+	right: 8px;
 `;
