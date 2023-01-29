@@ -1,10 +1,11 @@
 import { useState } from "react";
 import { SectionList, View } from "react-native";
-import { Header } from "../../components/Header";
 import { Meal } from "../../components/Meal";
 import { MealCard } from "../../components/MealCard";
 import { NewMeal } from "../../components/NewMeal";
-import { Container, SectionHeader } from "./styles";
+import { Container, Logo, Profile, SectionHeader, Header } from "./styles";
+
+import logoImg from "../../assets/logo.png";
 
 type Meal = {
 	name: string;
@@ -49,7 +50,10 @@ export function Home() {
 
 	return (
 		<Container>
-			<Header />
+			<Header>
+				<Logo source={logoImg} />
+				<Profile source={{ uri: "https://github.com/bakajeff.png" }} />
+			</Header>
 			<MealCard percent={90.86} color="PRIMARY" />
 			<NewMeal />
 			<SectionList
