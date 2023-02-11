@@ -1,6 +1,6 @@
 import { Container, Logo, ProfilePicture } from "./styles";
 
-import LogoImg from "../../assets/logo.png";
+import LogoImg from "@assets/logo.png";
 
 export function HomeHeader() {
 	return (

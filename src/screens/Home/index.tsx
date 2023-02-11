@@ -1,5 +1,4 @@
-import { Text } from "react-native";
-import { HomeHeader } from "../../components/HomeHeader";
+import { HomeHeader } from "@components/HomeHeader";
 import { Container } from "./styles";
 
 export function Home() {
