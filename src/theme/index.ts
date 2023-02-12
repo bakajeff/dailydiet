@@ -28,7 +28,7 @@ export default {
 		MD: 16,
 		LG: 18,
 		XL: 24,
-		XXL: 32,
+		"2XL": 32,
 	},
 	LINE_HEIGHT: "130",
 };
