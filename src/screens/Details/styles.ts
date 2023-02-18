@@ -1,4 +1,4 @@
-import styled from "styled-components/native";
+import styled, { css } from "styled-components/native";
 
 export const Container = styled.View``;
 
@@ -14,4 +14,12 @@ export const Content = styled.View`
 	border-top-right-radius: 20px;
 	
 	background-color: ${({theme}) => theme.COLORS.WHITE};
+`;
+
+export const ContentTitle = styled.Text`
+	${({theme}) => css`
+		font-size: ${theme.FONT_SIZE.SM}px;
+		font-family: ${theme.FONT_FAMILY.BOLD};
+		color: ${theme.COLORS.GRAY_100};
+	`}
 `;
