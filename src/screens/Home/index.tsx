@@ -54,9 +54,10 @@ export function Home() {
 				renderSectionHeader={({ section: { title } }) => (
 					<SectionHeader>{title}</SectionHeader>
 				)}
+				contentContainerStyle={{
+					paddingBottom: 100,
+				}}
 			/>
-
-			<Meal time="20:00" name="X-tudo" isOnDiet />
 		</Container>
 	);
 }
