@@ -22,4 +22,6 @@ export const ContentTitle = styled.Text`
 		font-family: ${theme.FONT_FAMILY.BOLD};
 		color: ${theme.COLORS.GRAY_100};
 	`}
+
+	padding-bottom: 23px;
 `;
