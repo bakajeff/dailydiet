@@ -7,7 +7,7 @@ import {
 } from "@expo-google-fonts/nunito-sans";
 
 import theme from "./src/theme";
-import { Home } from "./src/screens/Home";
+import { Details } from "./src/screens/Details";
 
 export default function App() {
 	const [fontsLoaded] = useFonts({
@@ -18,7 +18,7 @@ export default function App() {
 	return (
 		<ThemeProvider theme={theme}>
 			{fontsLoaded ? (
-				<Home />
+				<Details />
 			) : (
 				<ActivityIndicator
 					style={{ flex: 1, justifyContent: "center", alignItems: "center" }}
