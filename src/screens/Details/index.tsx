@@ -1,9 +1,10 @@
-import { Container, Title } from "./styles";
+import { DetailsHeader } from "@components/DetailsHeader";
+import { Container } from "./styles";
 
 export function Details() {
 	return (
 		<Container>
-			<Title>Details</Title>
+			<DetailsHeader />
 		</Container>
 	);
 }
