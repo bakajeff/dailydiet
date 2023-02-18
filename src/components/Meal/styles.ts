@@ -10,8 +10,8 @@ export const Container = styled(TouchableOpacity)`
 	flex-direction: row;
 	align-items: center;
 	padding: 14px 16px 14px 12px;
-	margin-top: 20px;
 	border-radius: 6px;
+	margin-top: 8px;
 `;
 
 export const Time = styled.Text`
