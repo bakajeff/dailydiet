@@ -1,13 +1,14 @@
-import { Caption, Container, Data } from "./styles";
+import { Caption, Container, ContainerStyleProps, Data } from "./styles";
 
 type Props = {
 	data: number;
 	caption: string;
+	type?: ContainerStyleProps;
 };
 
-export function DataCard({ data, caption }: Props) {
+export function DataCard({ data, caption, type }: Props) {
 	return (
-		<Container>
+		<Container type={type}>
 			<Data>{data}</Data>
 			<Caption>{caption}</Caption>
 		</Container>

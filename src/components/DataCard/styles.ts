@@ -1,16 +1,31 @@
 import styled, { css } from "styled-components/native";
 
-export const Container = styled.View`
-	width: 100%;
+export type ContainerStyleProps = "PRIMARY" | "SECONDARY";
 
+type Props = {
+	type?: ContainerStyleProps;
+}
+
+export const Container = styled.View<Props>`
 	padding: 16px;
+	margin-bottom: 12px;
 	
 	justify-content: center;
+	align-self: stretch;
 	
 	border-radius: 8px;
 
 	align-items: center;
+
 	background-color: ${({theme}) => theme.COLORS.GRAY_600};
+
+	${({type}) => 
+		type === "PRIMARY" && css` background-color: ${({theme}) => theme.COLORS.GREEN_LIGHT};`
+	};
+
+	${({type}) => 
+		type === "SECONDARY" && css` background-color: ${({theme}) => theme.COLORS.RED_LIGHT};`
+	};
 `;
 
 export const Data = styled.Text`
@@ -29,4 +44,5 @@ export const Caption = styled.Text`
 		color: ${theme.COLORS.GRAY_200};
 		font-family: ${theme.FONT_FAMILY.REGULAR};
 	`}
+	text-align: center;
 `;
