@@ -10,7 +10,10 @@ export function Details() {
 			<Content>
 				<ContentTitle>Estatísticas gerais</ContentTitle>
 
-				<DataCard />
+				<DataCard
+					data={23}
+					caption="melhor sequência de pratos dentro da dieta"
+				/>
 			</Content>
 		</Container>
 	);

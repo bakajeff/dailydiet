@@ -1,10 +1,15 @@
 import { Caption, Container, Data } from "./styles";
 
-export function DataCard() {
+type Props = {
+	data: number;
+	caption: string;
+};
+
+export function DataCard({ data, caption }: Props) {
 	return (
 		<Container>
-			<Data>23</Data>
-			<Caption>melhor sequência de pratos dentro da dieta</Caption>
+			<Data>{data}</Data>
+			<Caption>{caption}</Caption>
 		</Container>
 	);
 }
