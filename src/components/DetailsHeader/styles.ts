@@ -1,10 +1,20 @@
 import { ArrowLeft } from "phosphor-react-native";
+import { TouchableOpacity } from "react-native";
 import styled, { css } from "styled-components/native";
 
-export const Container = styled.View`
-	${({theme}) => css`
-		background-color: ${theme.COLORS.GREEN_LIGHT};
-	`}
+export type DetailsHeaderStyleProps = "PRIMARY" | "SECONDARY";
+
+type Props = {
+	type: DetailsHeaderStyleProps
+}
+
+type IconProps = {
+	color: DetailsHeaderStyleProps;
+}
+
+export const Container = styled.View<Props>`
+	background: ${({ theme, type }) =>
+		type === "PRIMARY" ? theme.COLORS.GREEN_LIGHT : theme.COLORS.RED_LIGHT};
 	padding: 72px 24px 66px 24px;
 	justify-content: center;
 	align-items: center;
@@ -27,12 +37,14 @@ export const Caption = styled.Text`
 	`}
 `;
 
-export const Icon = styled(ArrowLeft).attrs(({theme}) => ({
-	size: 24,
-	color: theme.COLORS.GREEN_DARK,
-}))`
+export const ButtonIcon = styled(TouchableOpacity)`
 	position: absolute;
 	left: 24px;
 	top: 54px;
 `;
+
+export const Icon = styled(ArrowLeft).attrs<IconProps>(({theme, color}) => ({
+	size: 24,
+	color: color === "PRIMARY" ? theme.COLORS.GREEN_DARK : theme.COLORS.RED_DARK,
+}))``;
 
