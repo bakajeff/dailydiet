@@ -9,6 +9,13 @@ export function NewMeal() {
 
 			<Content>
 				<Input label="Nome" />
+
+				<Input
+					label="Descrição"
+					textAlignVertical="top"
+					multiline
+					numberOfLines={4}
+				/>
 			</Content>
 		</Container>
 	);

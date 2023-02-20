@@ -9,7 +9,7 @@ export function Input({ label, ...rest }: Props) {
 	return (
 		<Container>
 			<Label>{label}</Label>
-			<Field {...rest} />
+			<Field underlineColorAndroid="transparent" {...rest} />
 		</Container>
 	);
 }
