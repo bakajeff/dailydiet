@@ -1,7 +1,10 @@
 import styled, { css } from "styled-components/native";
 
 export const Container = styled.View`
+	flex-shrink: 1;
+	flex-grow: 1;
 	margin-bottom: 24px;
+	align-self: stretch;
 `;
 
 export const Label = styled.Text`
@@ -16,7 +19,7 @@ export const Label = styled.Text`
 
 export const Field = styled.TextInput`
 	padding: 14px;
-	
+
 	border-radius: 6px;
 	
 	${({theme}) => css`
