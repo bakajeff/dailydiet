@@ -16,7 +16,13 @@ export const Label = styled.Text`
 
 export const Field = styled.TextInput`
 	padding: 14px;
-	border: 1px solid ${({theme}) => theme.COLORS.GRAY_500};
-
+	
 	border-radius: 6px;
+	
+	${({theme}) => css`
+		border: 1px solid ${({theme}) => theme.COLORS.GRAY_500};
+		font-family: ${theme.FONT_FAMILY.REGULAR};
+		font-size: ${theme.FONT_SIZE.MD}px;
+		color: ${theme.COLORS.GRAY_100};
+	`};
 `;
