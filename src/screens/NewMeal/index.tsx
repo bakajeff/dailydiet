@@ -5,7 +5,7 @@ import { Input } from "@components/Input";
 import { OptionButton } from "@components/OptionButton";
 import { ScreenHeader } from "@components/ScreenHeader";
 
-import { Container, Content, Label, OptionsContainer } from "./styles";
+import { Content, Label, OptionsContainer } from "./styles";
 
 export function NewMeal() {
 	const [active, setActive] = useState(true);
@@ -15,7 +15,7 @@ export function NewMeal() {
 	}
 
 	return (
-		<Container>
+		<>
 			<ScreenHeader title="Nova refeição" />
 
 			<Content>
@@ -58,6 +58,6 @@ export function NewMeal() {
 					/>
 				</OptionsContainer>
 			</Content>
-		</Container>
+		</>
 	);
 }
