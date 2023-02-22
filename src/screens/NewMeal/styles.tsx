@@ -1,6 +1,7 @@
 import styled, { css } from "styled-components/native";
 
 export const Content = styled.View`
+	flex: 1;
 	background-color: ${({ theme }) => theme.COLORS.WHITE};
 	
 	margin-top: -28px;
@@ -21,7 +22,10 @@ export const Label = styled.Text`
 	margin-bottom: 4px;
 `;
 
+export const FormColumn = styled.View`
+	flex: 1;
+`;
+
 export const OptionsContainer = styled.View`
 	flex-direction: row;
-	justify-content: space-between;
 `;

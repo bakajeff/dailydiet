@@ -1,11 +1,12 @@
 import { useState } from "react";
-import { View } from "react-native";
+import { Text, View } from "react-native";
 
 import { Input } from "@components/Input";
 import { OptionButton } from "@components/OptionButton";
 import { ScreenHeader } from "@components/ScreenHeader";
 
-import { Content, Label, OptionsContainer } from "./styles";
+import { Content, FormColumn, Label, OptionsContainer } from "./styles";
+import { Button } from "@components/Button";
 
 export function NewMeal() {
 	const [active, setActive] = useState(true);
@@ -33,11 +34,15 @@ export function NewMeal() {
 						flexDirection: "row",
 					}}
 				>
-					<Input label="Data" />
+					<FormColumn>
+						<Input label="Data" />
+					</FormColumn>
 
 					<View style={{ marginRight: 10, marginLeft: 10 }} />
 
-					<Input label="Hora" />
+					<FormColumn>
+						<Input label="Hora" />
+					</FormColumn>
 				</View>
 
 				<Label>Está dentro da dieta?</Label>

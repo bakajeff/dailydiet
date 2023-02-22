@@ -1,12 +1,5 @@
 import styled, { css } from "styled-components/native";
 
-export const Container = styled.View`
-	flex-shrink: 1;
-	flex-grow: 1;
-	margin-bottom: 24px;
-	align-self: stretch;
-`;
-
 export const Label = styled.Text`
 	${({theme}) => css`
 		font-family: ${theme.FONT_FAMILY.BOLD};
@@ -19,6 +12,8 @@ export const Label = styled.Text`
 
 export const Field = styled.TextInput`
 	padding: 14px;
+
+	margin-bottom: 24px;
 
 	border-radius: 6px;
 	

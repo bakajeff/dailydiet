@@ -1,5 +1,5 @@
 import { TextInputProps } from "react-native";
-import { Container, Field, Label } from "./styles";
+import { Field, Label } from "./styles";
 
 type Props = TextInputProps & {
 	label: string;
@@ -7,9 +7,9 @@ type Props = TextInputProps & {
 
 export function Input({ label, ...rest }: Props) {
 	return (
-		<Container>
+		<>
 			<Label>{label}</Label>
 			<Field underlineColorAndroid="transparent" {...rest} />
-		</Container>
+		</>
 	);
 }
