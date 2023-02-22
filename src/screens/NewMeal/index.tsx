@@ -62,6 +62,15 @@ export function NewMeal() {
 						onPress={handleToggleActive}
 					/>
 				</OptionsContainer>
+
+				<View
+					style={{
+						flex: 1,
+						justifyContent: "flex-end",
+					}}
+				>
+					<Button title="Cadastrar refeição" />
+				</View>
 			</Content>
 		</>
 	);
