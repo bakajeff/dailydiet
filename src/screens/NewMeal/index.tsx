@@ -1,11 +1,17 @@
 import { useState } from "react";
-import { Text, View } from "react-native";
+import { View } from "react-native";
 
 import { Input } from "@components/Input";
 import { OptionButton } from "@components/OptionButton";
 import { ScreenHeader } from "@components/ScreenHeader";
 
-import { Content, FormColumn, Label, OptionsContainer } from "./styles";
+import {
+	Container,
+	Content,
+	FormColumn,
+	Label,
+	OptionsContainer,
+} from "./styles";
 import { Button } from "@components/Button";
 
 export function NewMeal() {
@@ -16,7 +22,7 @@ export function NewMeal() {
 	}
 
 	return (
-		<>
+		<Container>
 			<ScreenHeader title="Nova refeição" />
 
 			<Content>
@@ -63,15 +69,10 @@ export function NewMeal() {
 					/>
 				</OptionsContainer>
 
-				<View
-					style={{
-						flex: 1,
-						justifyContent: "flex-end",
-					}}
-				>
+				<View style={{ marginTop: 48 }}>
 					<Button title="Cadastrar refeição" />
 				</View>
 			</Content>
-		</>
+		</Container>
 	);
 }
