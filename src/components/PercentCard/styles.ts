@@ -18,7 +18,6 @@ export const Container = styled(TouchableOpacity)<Props>`
 	background: ${({ theme, type }) =>
 		type === "PRIMARY" ? theme.COLORS.GREEN_LIGHT : theme.COLORS.RED_LIGHT};
 	border-radius: 8px;
-	margin-top: 32px;
 `;
 
 export const Percent = styled.Text`
