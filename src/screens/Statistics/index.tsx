@@ -26,14 +26,16 @@ export function Statistics() {
 					<DataCard
 						type="PRIMARY"
 						data={99}
+						fullWidth
 						caption="refeições dentro da dieta"
 					/>
 
-					<View style={{ marginRight: 6, marginLeft: 6 }} />
+					<View style={{ marginLeft: 12 }} />
 
 					<DataCard
 						type="SECONDARY"
 						data={10}
+						fullWidth
 						caption="refeições fora da dieta"
 					/>
 				</View>

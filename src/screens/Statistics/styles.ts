@@ -1,9 +1,11 @@
 import styled, { css } from "styled-components/native";
 
-export const Container = styled.View``;
+export const Container = styled.View`
+	flex: 1;
+`;
 
 export const Content = styled.View`
-	width: 100%;
+	flex: 1;
 	
 	margin-top: -32px;
 	padding: 33px 24px;
@@ -13,7 +15,7 @@ export const Content = styled.View`
 	border-top-left-radius: 20px;
 	border-top-right-radius: 20px;
 	
-	background-color: ${({theme}) => theme.COLORS.WHITE};
+	background-color: ${({theme}) => theme.COLORS.GRAY_700};
 `;
 
 export const ContentTitle = styled.Text`

@@ -4,18 +4,24 @@ export type ContainerStyleProps = "PRIMARY" | "SECONDARY";
 
 type Props = {
 	type?: ContainerStyleProps;
+	fullWidth?: boolean;
 }
 
 export const Container = styled.View<Props>`
+
+	${({fullWidth}) => fullWidth && css`
+		flex: 1;
+	`};
+
 	padding: 16px;
 	margin-bottom: 12px;
-	
-	justify-content: center;
-	align-self: stretch;
-	
-	border-radius: 8px;
 
+	justify-content: center;
 	align-items: center;
+
+	align-self: stretch;
+
+	border-radius: 8px;
 
 	background-color: ${({theme}) => theme.COLORS.GRAY_600};
 
