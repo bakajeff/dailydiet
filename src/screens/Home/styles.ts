@@ -2,6 +2,8 @@ import styled, {css} from "styled-components/native";
 
 export const Container = styled.View`
 	padding: 0 24px;
+	background-color: ${({theme}) => theme.COLORS.GRAY_700};
+	flex: 1;
 `;
 
 export const MealHeader = styled.Text`
