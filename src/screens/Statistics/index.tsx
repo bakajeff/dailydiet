@@ -3,7 +3,7 @@ import { DetailsHeader } from "@components/DetailsHeader";
 import { View } from "react-native";
 import { Container, Content, ContentTitle } from "./styles";
 
-export function Details() {
+export function Statistics() {
 	return (
 		<Container>
 			<DetailsHeader />
