@@ -8,7 +8,6 @@ type Props = {
 }
 
 export const Container = styled.View<Props>`
-
 	${({fullWidth}) => fullWidth && css`
 		flex: 1;
 	`};
@@ -50,5 +49,6 @@ export const Caption = styled.Text`
 		color: ${theme.COLORS.GRAY_200};
 		font-family: ${theme.FONT_FAMILY.REGULAR};
 	`}
+	
 	text-align: center;
 `;

@@ -14,24 +14,28 @@ type ContainerProps = {
 
 export const Container = styled(Pressable)<ContainerProps>`
 	flex-direction: row;
+	
 	flex-grow: 1;
 	flex-shrink: 1;
+
 	align-items: center;
 	justify-content: center;
 
 	background-color: ${({theme}) => theme.COLORS.GRAY_600};
 
 	${({type, active, theme}) => 
-		(active && type === "PRIMARY") && css`
-			background-color:  ${theme.COLORS.GREEN_LIGHT};
-			border: 1px solid ${theme.COLORS.GREEN_DARK};
-		`};
+		(active && type === "PRIMARY")
+			&& css`
+				background-color:  ${theme.COLORS.GREEN_LIGHT};
+				border: 1px solid ${theme.COLORS.GREEN_DARK};
+			`};
 
 	${({type, active, theme}) => 
-		(active && type === "SECONDARY") && css`
-			background-color: ${theme.COLORS.RED_LIGHT};
-			border: 1px solid ${theme.COLORS.RED_DARK};
-		`};
+		(active && type === "SECONDARY")
+			&& css`
+				background-color: ${theme.COLORS.RED_LIGHT};
+				border: 1px solid ${theme.COLORS.RED_DARK};
+			`};
 
 	padding: 16px;
 	border-radius: 6px;

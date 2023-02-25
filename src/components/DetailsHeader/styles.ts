@@ -15,7 +15,9 @@ type IconProps = {
 export const Container = styled.View<Props>`
 	background: ${({ theme, type }) =>
 		type === "PRIMARY" ? theme.COLORS.GREEN_LIGHT : theme.COLORS.RED_LIGHT};
+
 	padding: 72px 24px 66px 24px;
+
 	justify-content: center;
 	align-items: center;
 `;
@@ -25,7 +27,8 @@ export const Percent = styled.Text`
 		font-family: ${theme.FONT_FAMILY.BOLD};
 		font-size: ${theme.FONT_SIZE["2XL"]}px;
 		color: ${theme.COLORS.GRAY_100};
-	`}
+	`};
+
 	padding-bottom: 2px;
 `;
 
@@ -34,7 +37,7 @@ export const Caption = styled.Text`
 		font-size: ${theme.FONT_SIZE.SM}px;
 		color: ${theme.COLORS.GRAY_200};
 		font-family: ${theme.FONT_FAMILY.REGULAR};
-	`}
+	`};
 `;
 
 export const ButtonIcon = styled(TouchableOpacity)`

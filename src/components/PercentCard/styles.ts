@@ -14,9 +14,12 @@ type IconProps = {
 
 export const Container = styled(TouchableOpacity)<Props>`
 	padding: 20px 16px;
+
 	align-items: center;
+	
 	background: ${({ theme, type }) =>
 		type === "PRIMARY" ? theme.COLORS.GREEN_LIGHT : theme.COLORS.RED_LIGHT};
+	
 	border-radius: 8px;
 `;
 
