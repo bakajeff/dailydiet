@@ -1,4 +1,6 @@
+import { IconButton } from "@components/IconButton";
 import { ScreenHeader } from "@components/ScreenHeader";
+import { View } from "react-native";
 
 import {
 	Container,
@@ -30,6 +32,10 @@ export function Meal() {
 					<TagIndicator type="PRIMARY" />
 					<TagText>dentro da dieta</TagText>
 				</Tag>
+
+				<View>
+					<IconButton title="Editar refeição" />
+				</View>
 			</Content>
 		</Container>
 	);
