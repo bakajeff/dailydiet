@@ -34,7 +34,8 @@ export function Meal() {
 				</Tag>
 
 				<View>
-					<IconButton title="Editar refeição" />
+					<IconButton variant="SOLID" title="Editar refeição" />
+					<IconButton variant="OUTLINED" title="Excluir refeição" />
 				</View>
 			</Content>
 		</Container>

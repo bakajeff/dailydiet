@@ -1,14 +1,22 @@
-import { Container, ButtonText, EditIcon } from "./styles";
+import {
+	Container,
+	ButtonText,
+	EditIcon,
+	ContainerStyleProps,
+	DeleteIcon,
+} from "./styles";
 
 type Props = {
 	title: string;
+	variant: ContainerStyleProps;
 };
 
-export function IconButton({ title }: Props) {
+export function IconButton({ title, variant = "SOLID" }: Props) {
 	return (
-		<Container>
-			<EditIcon />
-			<ButtonText>{title}</ButtonText>
+		<Container variant={variant}>
+			{variant === "SOLID" ? <EditIcon /> : <DeleteIcon />}
+
+			<ButtonText variant={variant}>{title}</ButtonText>
 		</Container>
 	);
 }
