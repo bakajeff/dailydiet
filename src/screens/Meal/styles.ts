@@ -6,7 +6,11 @@ type IndicatorProps = {
 	type: IndicatorStyleProps;
 };
 
-export const Container = styled.ScrollView`
+export const Container = styled.ScrollView.attrs({
+	contentContainerStyle: {
+		flexGrow: 1,
+	}
+})`
 	background-color: ${({ theme }) => theme.COLORS.GRAY_700};
 `;
 

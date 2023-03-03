@@ -17,7 +17,7 @@ import {
 export function Meal() {
 	return (
 		<Container>
-			<ScreenHeader title="Refeição" />
+			<ScreenHeader type="PRIMARY" title="Refeição" />
 
 			<Content>
 				<Title>Sanduíche</Title>
@@ -33,7 +33,11 @@ export function Meal() {
 					<TagText>dentro da dieta</TagText>
 				</Tag>
 
-				<View>
+				<View
+					style={{
+						marginTop: "auto",
+					}}
+				>
 					<IconButton variant="SOLID" title="Editar refeição" />
 					<IconButton variant="OUTLINED" title="Excluir refeição" />
 				</View>
