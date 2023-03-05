@@ -45,13 +45,18 @@ export function Home() {
 		navigation.navigate("statistics");
 	}
 
+	function handleNewMeal() {
+		navigation.navigate("new");
+	}
+
 	return (
 		<Container>
 			<HomeHeader />
 			<PercentCard type="PRIMARY" percent="90,86" onPress={handleStatistics} />
 
 			<MealHeader>Refeições</MealHeader>
-			<Button title="Nova refeição" />
+
+			<Button onPress={handleNewMeal} title="Nova refeição" />
 
 			<SectionList
 				sections={meals}
