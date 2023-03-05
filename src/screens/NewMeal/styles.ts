@@ -1,10 +1,16 @@
 import styled, { css } from "styled-components/native";
 
-export const Container = styled.ScrollView``;
+export const Container = styled.ScrollView.attrs({
+	contentContainerStyle: {
+		flexGrow: 1,
+	},
+})`
+	background-color: ${({ theme }) => theme.COLORS.GRAY_700};
+`;
 
 export const Content = styled.View`
 	flex: 1;
-	background-color: ${({ theme }) => theme.COLORS.WHITE};
+	background-color: ${({ theme }) => theme.COLORS.GRAY_700};
 	
 	margin-top: -28px;
 
