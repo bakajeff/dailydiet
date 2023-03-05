@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { View } from "react-native";
 
+import { useNavigation } from "@react-navigation/native";
+
 import { Input } from "@components/Input";
 import { OptionButton } from "@components/OptionButton";
 import { ScreenHeader } from "@components/ScreenHeader";
@@ -17,8 +19,14 @@ import { Button } from "@components/Button";
 export function NewMeal() {
 	const [active, setActive] = useState(true);
 
+	const navigation = useNavigation();
+
 	function handleToggleActive() {
 		setActive((prevState) => !prevState);
+	}
+
+	function handleCreateMeal() {
+		navigation.navigate("feedback");
 	}
 
 	return (
@@ -70,7 +78,7 @@ export function NewMeal() {
 				</OptionsContainer>
 
 				<View style={{ marginTop: 48 }}>
-					<Button title="Cadastrar refeição" />
+					<Button title="Cadastrar refeição" onPress={handleCreateMeal} />
 				</View>
 			</Content>
 		</Container>
