@@ -12,9 +12,9 @@ type Props = TouchableOpacityProps & {
 	type: PercentCardStyleProps;
 };
 
-export function PercentCard({ percent, type = "SECONDARY" }: Props) {
+export function PercentCard({ percent, type = "SECONDARY", ...rest }: Props) {
 	return (
-		<Container type={type}>
+		<Container type={type} {...rest}>
 			<Icon color={type} />
 			<Percent>{percent}%</Percent>
 			<Caption>das refeições dentro da dieta</Caption>

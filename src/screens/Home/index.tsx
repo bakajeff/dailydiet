@@ -1,4 +1,7 @@
 import { useState } from "react";
+import { SectionList } from "react-native";
+
+import { useNavigation } from "@react-navigation/native";
 
 import { Button } from "@components/Button";
 import { HomeHeader } from "@components/HomeHeader";
@@ -6,7 +9,6 @@ import { Meal } from "@components/Meal";
 import { PercentCard } from "@components/PercentCard";
 
 import { Container, MealHeader, SectionHeader } from "./styles";
-import { SectionList } from "react-native";
 
 export function Home() {
 	const [meals, setMeals] = useState([
@@ -37,10 +39,16 @@ export function Home() {
 		},
 	]);
 
+	const navigation = useNavigation();
+
+	function handleStatistics() {
+		navigation.navigate("statistics");
+	}
+
 	return (
 		<Container>
 			<HomeHeader />
-			<PercentCard type="PRIMARY" percent="90,86" />
+			<PercentCard type="PRIMARY" percent="90,86" onPress={handleStatistics} />
 
 			<MealHeader>Refeições</MealHeader>
 			<Button title="Nova refeição" />
