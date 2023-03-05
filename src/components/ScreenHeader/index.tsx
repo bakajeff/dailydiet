@@ -1,3 +1,4 @@
+import { useNavigation } from "@react-navigation/native";
 import { View } from "react-native";
 import { useTheme } from "styled-components/native";
 import {
@@ -16,15 +17,21 @@ type Props = {
 export function ScreenHeader({ title, type = "DEFAULT" }: Props) {
 	const { COLORS } = useTheme();
 
+	const navigation = useNavigation();
+
 	const colors = {
 		DEFAULT: COLORS.GRAY_200,
 		PRIMARY: COLORS.GREEN_DARK,
 		SECONDARY: COLORS.RED_DARK,
 	};
 
+	function handleGoBack() {
+		navigation.goBack();
+	}
+
 	return (
 		<Container type={type}>
-			<ButtonIcon>
+			<ButtonIcon onPress={handleGoBack}>
 				<Icon color={colors[type]} />
 			</ButtonIcon>
 
