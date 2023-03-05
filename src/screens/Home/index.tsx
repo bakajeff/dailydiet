@@ -49,6 +49,10 @@ export function Home() {
 		navigation.navigate("new");
 	}
 
+	function handleOpenMealDetails() {
+		navigation.navigate("meal");
+	}
+
 	return (
 		<Container>
 			<HomeHeader />
@@ -62,7 +66,12 @@ export function Home() {
 				sections={meals}
 				keyExtractor={(item) => item.name}
 				renderItem={({ item }) => (
-					<Meal name={item.name} time={item.time} isOnDiet={item.isOnDiet} />
+					<Meal
+						name={item.name}
+						time={item.time}
+						isOnDiet={item.isOnDiet}
+						onPress={handleOpenMealDetails}
+					/>
 				)}
 				renderSectionHeader={({ section: { title } }) => (
 					<SectionHeader>{title}</SectionHeader>
