@@ -1,12 +1,33 @@
-import { ButtonIcon, Caption, Container, Icon, Percent } from "./styles";
+import { useNavigation } from "@react-navigation/native";
 
-export function DetailsHeader() {
+import {
+	ButtonIcon,
+	Caption,
+	Container,
+	DetailsHeaderStyleProps,
+	Icon,
+	Percent,
+} from "./styles";
+
+type Props = {
+	type: DetailsHeaderStyleProps;
+};
+
+export function DetailsHeader({ type = "PRIMARY" }: Props) {
+	const navigation = useNavigation();
+
+	function handleGoBack() {
+		navigation.goBack();
+	}
+
 	return (
-		<Container type="PRIMARY">
-			<ButtonIcon>
-				<Icon color="PRIMARY" />
+		<Container type={type}>
+			<ButtonIcon onPress={handleGoBack}>
+				<Icon color={type} />
 			</ButtonIcon>
+
 			<Percent>90,86%</Percent>
+
 			<Caption>das refeições dentro da dieta</Caption>
 		</Container>
 	);
